@@ -5,10 +5,10 @@ const routes = require("./helpers.js/routes");
 
 const start = async () => {
   try {
-    // await connectDB(fastify);
-    fastify.register(require("./db"));
+    await connectDB(fastify);
+    // fastify.register(require("./db"));
 
-    // await connectRedis(fastify);
+    await connectRedis(fastify);
     // await worker();
     routes(fastify);
     await fastify.listen({ port: 3008 });
