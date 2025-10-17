@@ -34,6 +34,9 @@ module.exports = async function (fastify) {
     },
   });
 
+
+  
+
   // get unque
   fastify.post("/unique_product", {
     handler: async (req, res) => {
