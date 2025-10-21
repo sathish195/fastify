@@ -4,11 +4,7 @@ const fastifyRedis = require("@fastify/redis");
 module.exports = async function (fastify) {
   try {
     await fastify.register(fastifyRedis, {
-      host: "redis-13247.c305.ap-south-1-1.ec2.redns.redis-cloud.com",
-      port: 13247,
-      password: "JG8S0vwtOulEpNJPXprPwbrIkj679Yzl",
-      // url: "redis://:<JG8S0vwtOulEpNJPXprPwbrIkj679Yzl>@<redis-13247.c305.ap-south-1-1.ec2.redns.redis-cloud.com>:<13247>",
-      url: `redis://127.0.0.1:6379`,
+      url: `redis://JG8S0vwtOulEpNJPXprPwbrIkj679Yzl@redis-13247.c305.ap-south-1-1.ec2.redns.redis-cloud.com:13247`,
     });
 
     fastify.log.info("✅ Redis connected");
