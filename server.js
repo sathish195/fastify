@@ -6,7 +6,7 @@ const routes = require("./helpers.js/routes");
 const start = async () => {
   try {
     await connectDB(fastify);
-    await connectRedis(fastify); 
+    await connectRedis(fastify);
     routes(fastify);
 
     const port = process.env.PORT || 4000;
