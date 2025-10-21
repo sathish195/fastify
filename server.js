@@ -12,7 +12,7 @@ const start = async () => {
     // await worker();
     routes(fastify);
     await fastify.listen({ port: 4000 });
-    fastify.log.info("🚀 Server running at http://localhost:3000");
+    fastify.log.info("🚀 Server running at http://localhost:4000");
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
