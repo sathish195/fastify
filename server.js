@@ -11,7 +11,7 @@ const start = async () => {
     // await connectRedis(fastify);
     // await worker();
     routes(fastify);
-    await fastify.listen({ port: 3008 });
+    await fastify.listen({ port: 4000 });
     fastify.log.info("🚀 Server running at http://localhost:3000");
   } catch (err) {
     fastify.log.error(err);
