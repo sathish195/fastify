@@ -14,14 +14,15 @@ module.exports = async function (fastify) {
     handler: async (req, res) => {
       try {
         const productData = req.body;
+        console.log(productData);
         const product = new Product(productData);
-        product = await product.save();
-        console.log(product);
+        let p = await product.save();
+        console.log(p);
 
         res.status(201).send({
           success: true,
           message: "Product created successfully",
-          product,
+          product: p,
         });
       } catch (err) {
         fastify.log.error(err);
