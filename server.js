@@ -2,6 +2,14 @@ const fastify = require("fastify")({ logger: true });
 const connectDB = require("./db");
 const connectRedis = require("./redis");
 const routes = require("./helpers.js/routes");
+const cors = require("@fastify/cors");
+
+// Register CORS
+fastify.register(cors, {
+  origin: "*", // allow all origins (for development)
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+});
 
 const start = async () => {
   try {
