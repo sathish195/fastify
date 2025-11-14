@@ -160,7 +160,7 @@ module.exports = async function (fastify) {
       }
     },
   });
-
+// D
   // Delete Product by ID (DELETE)
   fastify.delete("/products/:id", {
     handler: async (req, res) => {
